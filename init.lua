@@ -46,7 +46,6 @@ require("packer").startup(function(use)
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
-
 end)
 
 -- Set theme
@@ -145,7 +144,8 @@ cmp.setup({
 })
 
 local lspconfig = require("lspconfig")
-lspconfig.pyright.setup({})
+lspconfig.pyright.setup({
+})
 lspconfig.ts_ls.setup({})
 -- Add additional language servers as needed
 
@@ -171,3 +171,6 @@ vim.g.coc_global_extensions = { 'coc-python' }
 
 -- Configure Git
 require('gitsigns').setup()
+
+-- Disable Swap File
+vim.o.swapfile = false  -- Disable swap files
