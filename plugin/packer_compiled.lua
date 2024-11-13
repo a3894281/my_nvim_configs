@@ -124,6 +124,16 @@ _G.packer_plugins = {
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-perl"] = {
+    loaded = true,
+    path = "/home/magic/.local/share/nvim/site/pack/packer/start/vim-perl",
+    url = "https://github.com/vim-perl/vim-perl"
+  },
+  ["vim-template-toolkit"] = {
+    loaded = true,
+    path = "/home/magic/.local/share/nvim/site/pack/packer/start/vim-template-toolkit",
+    url = "https://github.com/blattmann/vim-template-toolkit"
+  },
   ["vscode.nvim"] = {
     loaded = true,
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/vscode.nvim",

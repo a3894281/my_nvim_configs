@@ -31,6 +31,11 @@ require("packer").startup(function(use)
 
   -- Fuzzy Finder (like VS Code's quick open)
   use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
+
+  -- Template Toolkit
+  use "vim-perl/vim-perl"
+  use "blattmann/vim-template-toolkit"
+  
 end)
 
 -- Set theme
@@ -41,7 +46,7 @@ vim.o.background = 'dark'
 local c = require('vscode.colors').get_colors()
 require('vscode').setup({
 
-    -- Enable transparent background
+   -- Enable transparent background
     transparent = true,
 
     -- Enable italic comment
@@ -141,5 +146,10 @@ vim.opt.cursorline = true     -- Highlight the current line
 
 -- Keymaps for easier navigation
 vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+
+-- Template Toolkit
+vim.cmd([[
+  autocmd BufRead,BufNewFile *.tt,*.tt2 set filetype=tt2html
+]])
+
