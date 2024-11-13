@@ -34,8 +34,19 @@ require("packer").startup(function(use)
 
   -- Template Toolkit
   use "vim-perl/vim-perl"
-  use "blattmann/vim-template-toolkit"
-  
+
+  -- Python Linting, Autocompletion, etc.
+  use { 'neoclide/coc.nvim', branch = 'release' }
+
+  -- Conda environment management
+  use ({
+    "kmontocam/nvim-conda",
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+
+  -- Git
+  use 'lewis6991/gitsigns.nvim'
+
 end)
 
 -- Set theme
@@ -149,7 +160,14 @@ vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", { noremap = t
 vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- Template Toolkit
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.tt,*.tt2 set filetype=tt2html
-]])
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = "*.tt",
+  command = "setfiletype tt2"
+})
 
+
+-- Configure coc.nvim for Python
+vim.g.coc_global_extensions = { 'coc-python' }
+
+-- Configure Git
+require('gitsigns').setup()

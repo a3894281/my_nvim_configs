@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/magic/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-conda"] = {
+    loaded = true,
+    path = "/home/magic/.local/share/nvim/site/pack/packer/start/nvim-conda",
+    url = "https://github.com/kmontocam/nvim-conda"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -128,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/magic/.local/share/nvim/site/pack/packer/start/vim-perl",
     url = "https://github.com/vim-perl/vim-perl"
-  },
-  ["vim-template-toolkit"] = {
-    loaded = true,
-    path = "/home/magic/.local/share/nvim/site/pack/packer/start/vim-template-toolkit",
-    url = "https://github.com/blattmann/vim-template-toolkit"
   },
   ["vscode.nvim"] = {
     loaded = true,
